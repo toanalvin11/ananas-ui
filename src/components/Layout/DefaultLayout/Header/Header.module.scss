@@ -1,0 +1,23 @@
+.wrapper {
+    height: 202px;
+}
+
+.header-top {
+    font-size: 15px;
+    height: 30px;
+    background: #303030;
+    color: var(--color-white);
+    & ul {
+        display: flex;
+        list-style-type: none;
+    }
+}
+.header-middle {
+    height: 112px;
+    padding-top: 10px;
+    background-color: rgb(155, 52, 52);
+}
+.header-bottom {
+    height: 50px;
+    background: #f1f1f1;
+}
