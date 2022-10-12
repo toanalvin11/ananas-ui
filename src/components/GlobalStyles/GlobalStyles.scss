@@ -1,0 +1,16 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    text-rendering: optimizeSpeed;
+}
