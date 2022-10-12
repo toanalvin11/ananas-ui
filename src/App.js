@@ -1,12 +1,31 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { PublicRoutes } from '~/routes';
+import { DefaultLayout } from '~/components/Layout';
+
 function App() {
     return (
-        <div className="App">
-            <h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo tempora repudiandae nisi recusandae
-                autem. Dolor inventore fuga voluptatem dicta dolore omnis sit sapiente sed porro aspernatur nobis
-                reiciendis, est delectus!
-            </h1>
-        </div>
+        <Router>
+            <div className="App">
+                <Routes>
+                    {PublicRoutes.map((route, index) => {
+                        const Layout = route.layout || DefaultLayout;
+                        const Page = route.component;
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
+                    })}
+                </Routes>
+            </div>
+        </Router>
     );
 }
 
