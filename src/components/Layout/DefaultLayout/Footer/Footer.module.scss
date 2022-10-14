@@ -1,0 +1,28 @@
+.wrapper {
+    height: 520px;
+    background: #4c4c4c;
+    display: flex;
+}
+
+.findstore {
+    float: left;
+    width: 306px;
+    padding: 0 10px;
+
+    justify-content: center;
+
+    img {
+        width: 280px;
+        margin: 50px 10px;
+    }
+
+    button {
+        height: 40px;
+        width: 280px;
+    }
+}
+.right {
+    background: red;
+    float: right;
+    width: 100%;
+}
