@@ -12,7 +12,7 @@ function Footer() {
         <footer className={cx('wrapper')}>
             <div className={cx('findstore')}>
                 <img src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Store.svg" alt="" />
-                <a href="#">
+                <a href="/#">
                     <button>Tìm cửa hàng</button>
                 </a>
             </div>
@@ -22,16 +22,16 @@ function Footer() {
                         <h4>Sản phẩm</h4>
                         <ul className={cx('hover')}>
                             <li>
-                                <a href="#">Giày Nam</a>
+                                <a href="/#">Giày Nam</a>
                             </li>
                             <li>
-                                <a href="#">Giày Nữ</a>
+                                <a href="/#">Giày Nữ</a>
                             </li>
                             <li>
-                                <a href="#">Thời trang & phụ kiện</a>
+                                <a href="/#">Thời trang & phụ kiện</a>
                             </li>
                             <li>
-                                <a href="#">Sale-off</a>
+                                <a href="/#">Sale-off</a>
                             </li>
                         </ul>
                     </div>
@@ -39,13 +39,13 @@ function Footer() {
                         <h4>Về công ty</h4>
                         <ul className={cx('hover')}>
                             <li>
-                                <a href="#">Tuyển dụng</a>
+                                <a href="/#">Tuyển dụng</a>
                             </li>
                             <li>
-                                <a href="#">Liên hệ nhượng quyền</a>
+                                <a href="/#">Liên hệ nhượng quyền</a>
                             </li>
                             <li>
-                                <a href="#">Về Ananas</a>
+                                <a href="/#">Về Ananas</a>
                             </li>
                         </ul>
                     </div>
@@ -53,16 +53,16 @@ function Footer() {
                         <h4>Hỗ trợ</h4>
                         <ul className={cx('hover')}>
                             <li>
-                                <a href="#">FAQs</a>
+                                <a href="/#">FAQs</a>
                             </li>
                             <li>
-                                <a href="#">Bảo mật thông tin</a>
+                                <a href="/#">Bảo mật thông tin</a>
                             </li>
                             <li>
-                                <a href="#">Chính sách chung</a>
+                                <a href="/#">Chính sách chung</a>
                             </li>
                             <li>
-                                <a href="#">Tra cứu đơn hàng</a>
+                                <a href="/#">Tra cứu đơn hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@ function Footer() {
                         <h4>Liên hệ</h4>
                         <ul className={cx('hover')}>
                             <li>
-                                <a href="#">Email góp ý</a>
+                                <a href="/#">Email góp ý</a>
                             </li>
                         </ul>
                         <span>Hotline: 0963 429 749</span>
@@ -81,17 +81,17 @@ function Footer() {
                         <h4>Ananas Social</h4>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="/#">
                                     <FaFacebookSquare className={cx('icon__right')} />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/#">
                                     <BsInstagram className={cx('icon__right')} />
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/#">
                                     <BsYoutube className={cx('icon__right')} />
                                 </a>
                             </li>
@@ -105,7 +105,7 @@ function Footer() {
                         </button>
                     </div>
                     <div className={cx('right__middle-img')}>
-                        <a href="">
+                        <a href="/#">
                             <img
                                 src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Logo_Ananas_Footer.svg"
                                 alt=""

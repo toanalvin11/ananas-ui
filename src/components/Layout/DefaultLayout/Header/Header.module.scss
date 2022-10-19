@@ -124,5 +124,13 @@
         text-transform: uppercase;
         font-size: 18px;
         width: 470px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+}
+
+.header-middle__search,
+.search-result {
+    width: 220px;
 }

@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { MdLocationOn } from 'react-icons/md';
 import { BsCartFill } from 'react-icons/bs';
 import { IoIosArrowDown, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { FiSearch } from 'react-icons/fi';
 import { FaHeart, FaUserAlt, FaBoxOpen } from 'react-icons/fa';
-import { useState } from 'react';
+import Tippy from '@tippyjs/react/headless'; //framework xài cho tìm kiếm
 
+import { Wrapper as DropdownWrapper } from '~/components/Dropdown';
 import styles from './Header.module.scss';
+import SearchResult from '~/components/SearchResult';
 
 const cx = classNames.bind(styles);
 
@@ -31,6 +34,7 @@ const slideHotNews = [
 
 function Header() {
     const [slide, setSlide] = useState(0);
+    // const [searchResult, setSearchResult] = useState([]);
 
     function renderHotNew() {
         const item = slideHotNews[slide];
@@ -91,9 +95,19 @@ function Header() {
                 <div className={cx('header-middle__navbar')}>
                     <ul>
                         <li>
-                            <a href="/#">
-                                Sản phẩm <IoIosArrowDown className={cx('arrow')} />
-                            </a>
+                            <Tippy
+                                placement="bottom"
+                                interactive
+                                render={(attrs) => (
+                                    <div className={cx('dropdown-products')} tabIndex="-1" {...attrs}>
+                                        <DropdownWrapper>Kết quả</DropdownWrapper>
+                                    </div>
+                                )}
+                            >
+                                <a href="/#">
+                                    Sản phẩm <IoIosArrowDown className={cx('arrow')} />
+                                </a>
+                            </Tippy>
                         </li>
                         <li>
                             <a href="/#">
@@ -123,7 +137,23 @@ function Header() {
                     <button>
                         <FiSearch />
                     </button>
-                    <input type="text" className={cx('search')} placeholder="Tìm kiếm" />
+                    <Tippy
+                        // visible={searchResult.length > 0}
+                        placement="bottom"
+                        interactive
+                        render={(attrs) => (
+                            <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                                <DropdownWrapper>
+                                    <h4>Kết quả cho ...</h4>
+                                    <SearchResult />
+                                    <SearchResult />
+                                    <SearchResult />
+                                </DropdownWrapper>
+                            </div>
+                        )}
+                    >
+                        <input type="text" className={cx('search')} placeholder="Tìm kiếm" />
+                    </Tippy>
                 </div>
             </div>
             <div className={cx('header__bottom')}>
