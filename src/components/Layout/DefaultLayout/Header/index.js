@@ -144,7 +144,7 @@ function Header() {
                         render={(attrs) => (
                             <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                                 <DropdownWrapper>
-                                    <h4>Kết quả cho ...</h4>
+                                    <h4>Kết quả</h4>
                                     <SearchResult />
                                     <SearchResult />
                                     <SearchResult />

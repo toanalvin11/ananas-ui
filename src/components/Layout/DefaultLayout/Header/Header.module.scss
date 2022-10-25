@@ -1,5 +1,5 @@
 .wrapper {
-    height: 202px;
+    height: 100%;
 }
 
 .header__top {
@@ -133,4 +133,10 @@
 .header-middle__search,
 .search-result {
     width: 220px;
+}
+
+.search-result {
+    h4 {
+        padding-left: 5px;
+    }
 }
