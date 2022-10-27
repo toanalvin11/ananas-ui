@@ -103,3 +103,105 @@
         }
     }
 }
+
+.seller {
+    width: 100%;
+    padding-bottom: 100px;
+
+    h4 {
+        padding-bottom: 40px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .seller-content {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .seller-card {
+            padding: 0 30px;
+
+            img {
+                width: 285px;
+                height: 285px;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+
+            .seller-card-caption {
+                text-align: center;
+                .seller-card__title {
+                    &:hover {
+                        color: var(--color-red);
+                    }
+                }
+
+                p,
+                strong {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+.posts {
+    padding: 50px 0;
+
+    h4 {
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .posts-content {
+        display: inline-grid;
+        grid-template-columns: 600px 600px;
+        column-gap: 50px;
+        padding: 30px;
+    }
+    .posts-card {
+        width: 100%;
+        height: 450px;
+
+        img {
+            width: 600px;
+            height: 300px;
+        }
+
+        a {
+            color: var(--color-red);
+            text-decoration: none;
+
+            &:hover {
+                color: rgba(0, 0, 255, 0.5);
+            }
+        }
+
+        .posts-card-caption {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .posts-card-title {
+            font-size: 23px;
+            color: var(--color-black);
+
+            &:hover {
+                color: var(--color-red);
+            }
+        }
+        .posts-card-desc {
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // Tối đa 2 hàng
+            -webkit-box-orient: vertical; //Nội dung đặt theo chiều dọc
+
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+    }
+}
