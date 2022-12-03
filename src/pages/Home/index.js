@@ -4,6 +4,7 @@ import styles from './Home.module.scss';
 import Collection from '~/components/Collection';
 import Category from '~/components/Category';
 import Card from '~/components/Card';
+import Post from '~/components/Post';
 
 const cx = classNames.bind(styles);
 
@@ -199,20 +200,15 @@ function Home() {
                 <div className={cx('posts')}>
                     <h4>TIN TỨC & BÀI VIẾT</h4>
                     <div className={cx('posts-content')}>
-                        {ListPosts.map((ListPost, index) => {
-                            return (
-                                <div key={index} className={cx('posts-card')}>
-                                    <img src={ListPost.image} alt="" />
-                                    <div className={cx('posts-card-caption')}>
-                                        <a href={ListPost.link}>
-                                            <strong className={cx('posts-card-title')}>{ListPost.title}</strong>
-                                        </a>
-                                        <p className={cx('posts-card-desc')}>{ListPost.desc}</p>
-                                        <a href="/#">Đọc thêm</a>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                        {ListPosts.map((ListPost, index) => (
+                            <Post
+                                key={index}
+                                title={ListPost.title}
+                                desc={ListPost.desc}
+                                image={ListPost.image}
+                                link={ListPost.link}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
