@@ -1,0 +1,48 @@
+.category-card {
+    position: relative;
+    padding: 0 40px;
+
+    .category-img {
+        height: 275px;
+        width: 393px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .category-items {
+        color: var(--color-white);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 40px 0;
+
+        p {
+            font-size: 23px;
+            font-weight: 600;
+            padding-bottom: 25px;
+        }
+
+        a {
+            color: var(--color-white);
+            text-decoration: none;
+
+            &:hover {
+                color: #f15e2c;
+            }
+        }
+
+        ul {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                list-style: none;
+                line-height: 2;
+                font-weight: 700;
+                display: block;
+            }
+        }
+    }
+}

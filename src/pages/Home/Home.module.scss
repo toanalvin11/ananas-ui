@@ -11,36 +11,7 @@
 }
 
 .collection {
-    padding: 80px 50px;
     display: flex;
-
-    .collection-advertisement {
-        padding: 0 20px;
-        margin-left: 0;
-
-        .collection-img {
-            display: flex;
-            width: 585px;
-            height: 320px;
-        }
-
-        .collection-content {
-            padding-top: 30px;
-
-            a {
-                font-size: 28px;
-                text-decoration: none;
-                color: var(--color-black);
-                font-weight: 700;
-            }
-
-            p {
-                font-size: 16px;
-                padding: 10px 0;
-                line-height: 1.5;
-            }
-        }
-    }
 }
 
 .category {
@@ -55,52 +26,6 @@
     .category-content {
         margin: 25px 25px;
         display: flex;
-
-        .category-card {
-            position: relative;
-            padding: 0 20px;
-
-            .category-img {
-                height: 275px;
-                width: 393px;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.3);
-            }
-
-            .category-items {
-                color: var(--color-white);
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                margin: 40px 0;
-
-                p {
-                    font-size: 23px;
-                    font-weight: 600;
-                    padding-bottom: 25px;
-                }
-
-                a {
-                    color: var(--color-white);
-                    text-decoration: none;
-
-                    &:hover {
-                        color: #f15e2c;
-                    }
-                }
-
-                ul {
-                    text-align: center;
-                }
-
-                li {
-                    list-style: none;
-                    line-height: 2;
-                    font-weight: 700;
-                }
-            }
-        }
     }
 }
 
@@ -158,8 +83,8 @@
     .posts-content {
         display: inline-grid;
         grid-template-columns: 600px 600px;
-        column-gap: 50px;
-        padding: 30px;
+        column-gap: 100px;
+        padding: 30px 70px;
     }
     .posts-card {
         width: 100%;

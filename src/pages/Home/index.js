@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
 
 import styles from './Home.module.scss';
+import Collection from '~/components/Collection';
+import Category from '~/components/Category';
 
 const cx = classNames.bind(styles);
 
@@ -52,8 +54,87 @@ function Home() {
             link: '/#',
         },
     ];
+
+    const ListCollections = [
+        {
+            title: 'ALL BLACK IN BLACK',
+            desc: 'Mặc dù được ứng dụng rất nhiều, nhưng sắc đen lúc nào cũng toát lên một vẻ huyền bí không nhàm chán',
+            image: 'https://ananas.vn/wp-content/uploads/banner-phụ_2m-600x320.jpg',
+        },
+        {
+            title: 'OUTLET SALE',
+            desc: 'Danh mục những sản phẩm bán tại "giá tốt hơn" chỉ được bán kênh online - Online Only, chúng đã từng làm mưa làm gió một thời gian và hiện đang rơi vào tình trạng bể size, bể số.',
+            image: 'https://ananas.vn/wp-content/uploads/Banner_Sale-off-1.jpg',
+        },
+    ];
+
+    const ListCategories = [
+        {
+            image: 'https://ananas.vn/wp-content/uploads/catalogy-1.jpg',
+            title: 'GIÀY NAM',
+            alt: 'Giày Nam',
+            ListItems: [
+                {
+                    item: 'New Arrivals',
+                    link: '/#',
+                },
+                {
+                    item: 'Best Seller',
+                    link: '/#',
+                },
+                {
+                    item: 'Sale-off',
+                    link: '/#',
+                },
+            ],
+        },
+        {
+            image: 'https://ananas.vn/wp-content/uploads/catalogy-2.jpg',
+            title: 'GIÀY NỮ',
+            alt: 'Giày Nữ',
+            ListItems: [
+                {
+                    item: 'New Arrivals',
+                    link: '/#',
+                },
+                {
+                    item: 'Best Seller',
+                    link: '/#',
+                },
+                {
+                    item: 'Sale-off',
+                    link: '/#',
+                },
+            ],
+        },
+        {
+            image: 'https://ananas.vn/wp-content/uploads/catalogy-3.jpg',
+            title: 'DÒNG SẢN PHẨM',
+            alt: 'Dòng sản phẩm',
+            ListItems: [
+                {
+                    item: 'Basas',
+                    link: '/#',
+                },
+                {
+                    item: 'Vintas',
+                    link: '/#',
+                },
+                {
+                    item: 'Urbas',
+                    link: '/#',
+                },
+                {
+                    item: 'Pattas',
+                    link: '/#',
+                },
+            ],
+        },
+    ];
+
     return (
         <div>
+            {/* {ListCategories.map((Categories, index) => console.log(Categories.ListItem))} */}
             <div className={cx('wrapper')}>
                 {/* Banner thứ 1 */}
                 <a href="/#">
@@ -64,98 +145,29 @@ function Home() {
 
                 {/* Collection */}
                 <div className={cx('collection')}>
-                    <div className={cx('collection-advertisement')}>
-                        <div className={cx('collection-img')}>
-                            <img src="https://ananas.vn/wp-content/uploads/banner-phụ_2m-600x320.jpg" alt="" />
-                        </div>
-                        <div className={cx('collection-content')}>
-                            <h3>
-                                <a href="/#">ALL BLACK IN BLACK</a>
-                            </h3>
-                            <p>
-                                Mặc dù được ứng dụng rất nhiều, nhưng sắc đen lúc nào cũng toát lên một vẻ huyền bí
-                                không nhàm chán
-                            </p>
-                        </div>
-                    </div>
-                    <div className={cx('collection-advertisement')}>
-                        <div className={cx('collection-img')}>
-                            <img src="https://ananas.vn/wp-content/uploads/Banner_Sale-off-1.jpg" alt="" />
-                        </div>
-                        <div className={cx('collection-content')}>
-                            <h3>
-                                <a href="/#">OUTLET SALE</a>
-                            </h3>
-                            <p>
-                                Danh mục những sản phẩm bán tại "giá tốt hơn" chỉ được bán kênh online - Online Only,
-                                chúng đã từng làm mưa làm gió một thời gian và hiện đang rơi vào tình trạng bể size, bể
-                                số.
-                            </p>
-                        </div>
-                    </div>
+                    {ListCollections.map((Collections, index) => (
+                        <Collection
+                            key={index}
+                            title={Collections.title}
+                            image={Collections.image}
+                            desc={Collections.desc}
+                        />
+                    ))}
                 </div>
 
                 {/* Category */}
                 <div className={cx('category')}>
                     <h3>DANH MỤC MUA HÀNG</h3>
                     <div className={cx('category-content')}>
-                        <div className={cx('category-card')}>
-                            <div className={cx('category-img')}></div>
-                            <img src="https://ananas.vn/wp-content/uploads/catalogy-1.jpg" alt="Giày Nam" />
-                            <div className={cx('category-items')}>
-                                <p>GIÀY NAM</p>
-                                <ul>
-                                    <a href="/#">
-                                        <li>New Arrivals</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Best Seller</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Sale-off</li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={cx('category-card')}>
-                            <div className={cx('category-img')}></div>
-                            <img src="https://ananas.vn/wp-content/uploads/catalogy-2.jpg" alt="Giày Nữ" />
-                            <div className={cx('category-items')}>
-                                <p>GIÀY NỮ</p>
-                                <ul>
-                                    <a href="/#">
-                                        <li>New Arrivals</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Best Seller</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Sale-off</li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={cx('category-card')}>
-                            <div className={cx('category-img')}></div>
-                            <img src="https://ananas.vn/wp-content/uploads/catalogy-3.jpg" alt="Dòng sản phẩm" />
-                            <div className={cx('category-items')}>
-                                <p>DÒNG SẢN PHẨM</p>
-                                <ul>
-                                    <a href="/#">
-                                        <li>Basas</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Vintas</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Urbas</li>
-                                    </a>
-                                    <a href="/#">
-                                        <li>Pattas</li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
+                        {ListCategories.map((Categories, index) => (
+                            <Category
+                                key={index}
+                                image={Categories.image}
+                                alt={Categories.alt}
+                                title={Categories.title}
+                                item={Categories.ListItems}
+                            />
+                        ))}
                     </div>
                 </div>
 
@@ -163,9 +175,9 @@ function Home() {
                 <div className={cx('seller')}>
                     <h4>BEST SELLER</h4>
                     <div className={cx('seller-content')}>
-                        {ListBestSellers.map((ListBestSeller) => {
+                        {ListBestSellers.map((ListBestSeller, index) => {
                             return (
-                                <div className={cx('seller-card')}>
+                                <div key={index} className={cx('seller-card')}>
                                     <img src={ListBestSeller.image} alt="" />
                                     <div className={cx('seller-card-caption')}>
                                         <strong className={cx('seller-card__title')}>{ListBestSeller.title}</strong>
@@ -189,9 +201,9 @@ function Home() {
                 <div className={cx('posts')}>
                     <h4>TIN TỨC & BÀI VIẾT</h4>
                     <div className={cx('posts-content')}>
-                        {ListPosts.map((ListPost) => {
+                        {ListPosts.map((ListPost, index) => {
                             return (
-                                <div className={cx('posts-card')}>
+                                <div key={index} className={cx('posts-card')}>
                                     <img src={ListPost.image} alt="" />
                                     <div className={cx('posts-card-caption')}>
                                         <a href={ListPost.link}>
