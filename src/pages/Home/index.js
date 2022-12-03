@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import Collection from '~/components/Collection';
 import Category from '~/components/Category';
+import Card from '~/components/Card';
 
 const cx = classNames.bind(styles);
 
@@ -175,18 +176,15 @@ function Home() {
                 <div className={cx('seller')}>
                     <h4>BEST SELLER</h4>
                     <div className={cx('seller-content')}>
-                        {ListBestSellers.map((ListBestSeller, index) => {
-                            return (
-                                <div key={index} className={cx('seller-card')}>
-                                    <img src={ListBestSeller.image} alt="" />
-                                    <div className={cx('seller-card-caption')}>
-                                        <strong className={cx('seller-card__title')}>{ListBestSeller.title}</strong>
-                                        <p className={cx('seller-card__color')}>{ListBestSeller.color}</p>
-                                        <strong className={cx('seller-card__price')}>{ListBestSeller.price}</strong>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                        {ListBestSellers.map((ListBestSeller, index) => (
+                            <Card
+                                key={index}
+                                title={ListBestSeller.title}
+                                color={ListBestSeller.color}
+                                price={ListBestSeller.price}
+                                image={ListBestSeller.image}
+                            />
+                        ))}
                     </div>
                 </div>
 

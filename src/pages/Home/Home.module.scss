@@ -43,31 +43,6 @@
         display: flex;
         width: 100%;
         justify-content: center;
-
-        .seller-card {
-            padding: 0 30px;
-
-            img {
-                width: 285px;
-                height: 285px;
-                object-fit: cover;
-                margin-bottom: 20px;
-            }
-
-            .seller-card-caption {
-                text-align: center;
-                .seller-card__title {
-                    &:hover {
-                        color: var(--color-red);
-                    }
-                }
-
-                p,
-                strong {
-                    padding: 10px 0;
-                }
-            }
-        }
     }
 }
 
