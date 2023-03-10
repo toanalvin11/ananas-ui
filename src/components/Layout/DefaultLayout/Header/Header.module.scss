@@ -1,142 +1,161 @@
 .wrapper {
     height: 100%;
-}
 
-.header__top {
-    font-size: 13px;
-    height: 30px;
-    background: #303030;
-
-    & ul {
-        display: flex;
-        list-style: none;
-        justify-content: flex-end;
-        padding: 3px 60px 0 0;
-        top: 100%;
-        transform: translate(0, 10%);
-    }
-    & li {
-        margin: 0 10px;
-    }
-
-    & a {
-        text-decoration: none;
-        color: var(--color-white);
-    }
-
-    :hover {
-        color: var(--color-red);
-    }
-}
-.header-middle {
-    height: 112px;
-    padding-top: 10px;
-    display: flex;
-    margin: 10px 0;
-    justify-content: space-between;
-    align-items: center;
-
-    & ul {
-        list-style: none;
-        display: flex;
-        margin-top: 20px;
-    }
-
-    & li {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-style: 1;
-        padding: 20px 20px 0 20px;
-    }
-
-    & a {
-        text-decoration: none;
-        color: var(--color-black);
-        font-size: 20px;
-        display: flex;
-    }
-
-    & .header-middle__logo {
-        float: left;
-        padding: 0 60px;
-        margin: 0 70px;
-    }
-
-    & .header-middle__navbar {
+    .header__top {
+        font-size: 13px;
         height: 100%;
-        float: left;
-        & .arrow {
-            margin-left: 5px;
-            transform: translateY(5px);
-            left: 0;
-        }
+        background: #303030;
+        padding: 15px 0;
 
-        :hover {
-            color: var(--color-red);
+        & ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            padding: 3px 60px 0 0;
+            top: 100%;
+
+            :hover {
+                color: var(--color-red);
+            }
+
+            & li {
+                margin: 0 15px;
+
+                & a {
+                    text-decoration: none;
+                    color: var(--color-white);
+                }
+            }
         }
     }
-    & .header-middle__navbar img {
-        transform: translateY(-50%);
-    }
-
-    & .header-middle__search {
-        height: 100%;
-        width: 350px;
+    .header-middle {
+        height: 112px;
+        padding: 10px 0;
         display: flex;
-        position: relative;
+        margin: 10px 0;
+        justify-content: space-between;
+        align-items: center;
 
-        input {
-            height: 40px;
-            width: 220px;
-            transform: translate(30%, 50%);
-            font-size: 14px;
-            border: 1px solid #ccc;
-            padding: 0 30px;
+        & ul {
+            list-style: none;
+            display: flex;
+            margin-top: 20px;
+            height: fit-content;
+
+            & li {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-style: 1;
+                padding: 20px 20px 0 20px;
+                height: 100%;
+
+                & a {
+                    text-decoration: none;
+                    color: var(--color-black);
+                    font-size: 20px;
+                    display: flex;
+                }
+            }
         }
 
-        button {
-            border: none;
-            background-color: transparent;
+        .header-middle__logo {
+            float: left;
+            padding: 0 60px;
+            margin: 0 70px;
+        }
+
+        .header-middle__navbar {
             height: 100%;
-            font-size: 21px;
-            position: absolute;
-            left: 70px;
-            top: -7px;
-            z-index: 1000;
+            float: left;
+
+            .header-middle_category {
+                :hover {
+                    color: var(--color-red);
+                    transform: translateY(-100%);
+                    transition: transform linear 1s;
+                }
+            }
+
+            .arrow {
+                margin-left: 5px;
+                transform: translateY(5px);
+                left: 0;
+            }
+
+            .image-DiscoverYOU img {
+                transform: translateY(-50%);
+            }
+        }
+
+        .header-middle__search {
+            height: 100%;
+            width: 350px;
+            display: flex;
+            position: relative;
+
+            button {
+                border: none;
+                background-color: transparent;
+                height: 100%;
+                font-size: 21px;
+                position: absolute;
+                left: 70px;
+                top: -7px;
+                z-index: 1000;
+            }
+
+            input {
+                height: 40px;
+                width: 220px;
+                transform: translate(30%, 50%);
+                font-size: 14px;
+                border: 1px solid #ccc;
+                padding: 0 30px;
+
+                .search:focus {
+                    outline: 1px solid var(--color-outline-input);
+                }
+            }
         }
     }
-    .search:focus {
-        outline: 1px solid var(--color-outline-input);
-    }
-}
 
-.header__bottom {
-    height: 50px;
-    background: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-
-    a {
-        text-decoration: none;
-        margin: 0 150px;
-        text-transform: uppercase;
-        font-size: 18px;
-        width: 470px;
+    .header__bottom {
+        height: 50px;
+        background: #f1f1f1;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 22px;
+
+        a {
+            text-decoration: none;
+            margin: 0 150px;
+            text-transform: uppercase;
+            font-size: 18px;
+            width: 470px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .header-middle__search,
+    .search-result {
+        width: 220px;
+    }
+
+    .search-result {
+        h4 {
+            padding-left: 5px;
+        }
     }
 }
 
-.header-middle__search,
-.search-result {
-    width: 220px;
-}
-
-.search-result {
-    h4 {
-        padding-left: 5px;
+@keyframes textHover {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 10px;
     }
 }

@@ -10,6 +10,7 @@ import Tippy from '@tippyjs/react/headless'; //framework xài cho tìm kiếm
 import { Wrapper as DropdownWrapper } from '~/components/Dropdown';
 import styles from './Header.module.scss';
 import SearchResult from '~/components/SearchResult';
+import DropdownProduct from '~/components/Dropdown/DropdownProduct';
 
 const cx = classNames.bind(styles);
 
@@ -55,32 +56,42 @@ function Header() {
                 <ul>
                     <li>
                         <a href="/#">
-                            <FaBoxOpen />
-                            &ensp;Tra cứu đơn hàng
+                            <span>
+                                <FaBoxOpen />
+                                &ensp;Tra cứu đơn hàng
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="/#">
-                            <MdLocationOn />
-                            &ensp; Tìm cửa hàng
+                            <span>
+                                <MdLocationOn />
+                                &ensp; Tìm cửa hàng
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="/#">
-                            <FaHeart />
-                            &ensp; Yêu thích
+                            <span>
+                                <FaHeart />
+                                &ensp; Yêu thích
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="/#">
-                            <FaUserAlt />
-                            &ensp; Đăng nhập
+                            <span>
+                                <FaUserAlt />
+                                &ensp; Đăng nhập
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="/#">
-                            <BsCartFill />
-                            &ensp; Giỏ hàng (0)
+                            <span>
+                                <BsCartFill />
+                                &ensp; Giỏ hàng (0)
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -94,13 +105,16 @@ function Header() {
                 </a>
                 <div className={cx('header-middle__navbar')}>
                     <ul>
-                        <li>
+                        <li className={cx('header-middle_category')}>
                             <Tippy
+                                visible
                                 placement="bottom"
                                 interactive
                                 render={(attrs) => (
                                     <div className={cx('dropdown-products')} tabIndex="-1" {...attrs}>
-                                        <DropdownWrapper>Kết quả</DropdownWrapper>
+                                        <DropdownWrapper>
+                                            <DropdownProduct />
+                                        </DropdownWrapper>
                                     </div>
                                 )}
                             >
@@ -124,7 +138,7 @@ function Header() {
                             <a href="/#">Sale off</a>
                         </li>
                         <li>
-                            <a href="/#">
+                            <a className={cx('image-DiscoverYOU')} href="/#">
                                 <img
                                     src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/DiscoverYOU.svg"
                                     alt=""
