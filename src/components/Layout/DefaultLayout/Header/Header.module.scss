@@ -49,6 +49,10 @@
                 padding: 20px 20px 0 20px;
                 height: 100%;
 
+                :hover {
+                    color: var(--color-red);
+                }
+
                 & a {
                     text-decoration: none;
                     color: var(--color-black);
@@ -67,14 +71,6 @@
         .header-middle__navbar {
             height: 100%;
             float: left;
-
-            .header-middle_category {
-                :hover {
-                    color: var(--color-red);
-                    transform: translateY(-100%);
-                    transition: transform linear 1s;
-                }
-            }
 
             .arrow {
                 margin-left: 5px;
