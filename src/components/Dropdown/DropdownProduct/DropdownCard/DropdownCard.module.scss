@@ -1,6 +1,17 @@
 .wrapper {
+    padding: 0px 25px;
+    opacity: 0.5;
+
     img {
-        width: 250px;
+        width: 280px;
     }
-    padding: 0 20px;
+
+    & a {
+        justify-content: center;
+        padding: 20px 0;
+        
+        & span {
+            color: var(--color-white);
+        }
+    }
 }

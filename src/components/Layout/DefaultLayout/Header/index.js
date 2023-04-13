@@ -111,31 +111,34 @@ function Header() {
                                 placement="bottom"
                                 interactive
                                 render={(attrs) => (
-                                    <div className={cx('dropdown-products')} tabIndex="-1" {...attrs}>
+                                    <div className={cx('dropdown-products')} tabIndex="-1" {...attrs} > 
                                         <DropdownWrapper>
                                             <DropdownProduct />
                                         </DropdownWrapper>
-                                    </div>
+                                </div>
                                 )}
                             >
                                 <a href="/#">
-                                    Sản phẩm <IoIosArrowDown className={cx('arrow')} />
+                                    <span>Sản phẩm <IoIosArrowDown className={cx('arrow')} /></span>
                                 </a>
+                                
                             </Tippy>
                         </li>
+                        
                         <li>
                             <a href="/#">
-                                Nam <IoIosArrowDown className={cx('arrow')} />
+                                <span>Nam <IoIosArrowDown className={cx('arrow')} /></span>
                             </a>
                         </li>
                         <li>
                             <a href="/#">
-                                Nữ
-                                <IoIosArrowDown className={cx('arrow')} />
+                                <span>Nữ <IoIosArrowDown className={cx('arrow')} /></span>
                             </a>
                         </li>
                         <li>
-                            <a href="/#">Sale off</a>
+                            <a href="/#">
+                                <span>Sale off</span>
+                            </a>
                         </li>
                         <li>
                             <a className={cx('image-DiscoverYOU')} href="/#">
@@ -145,8 +148,13 @@ function Header() {
                                 />
                             </a>
                         </li>
+                        
                     </ul>
+                    
                 </div>
+                
+                        
+                        
                 <div className={cx('header-middle__search')}>
                     <button>
                         <FiSearch />

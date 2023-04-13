@@ -28,11 +28,15 @@ function DropdownProduct() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('top')}>
-                {ListMenus.map((Menu, index) => (
-                    <DropdownCard key={index} image={Menu.image} title={Menu.title} />
-                ))}
+                <a href='/#'>
+                    {ListMenus.map((Menu, index) => (
+                        <DropdownCard key={index} image={Menu.image} title={Menu.title} />
+                    ))}
+                </a>
             </div>
-            <div className={cx('bottom')}>Mọi người thường gọi chúng tôi là Dứa !</div>
+            <div className={cx('bottom')}>
+                <a href='/#'>Mọi người thường gọi chúng tôi là <span> Dứa </span> !</a>
+            </div>
         </div>
     );
 }
