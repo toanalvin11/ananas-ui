@@ -8,7 +8,7 @@ function DropdownCard(props) {
     return (
         <div className={cx('wrapper')}>
             <img src={props.image} alt="" />
-            <a href='/#'>
+            <a href="/#">
                 <span>{props.title}</span>
             </a>
         </div>

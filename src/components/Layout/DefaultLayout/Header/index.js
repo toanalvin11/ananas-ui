@@ -107,37 +107,41 @@ function Header() {
                     <ul>
                         <li className={cx('header-middle_category')}>
                             <Tippy
-                                visible
                                 placement="bottom"
                                 interactive
                                 render={(attrs) => (
-                                    <div className={cx('dropdown-products')} tabIndex="-1" {...attrs} > 
+                                    <div className={cx('dropdown-products')} tabIndex="-1" {...attrs}>
                                         <DropdownWrapper>
                                             <DropdownProduct />
                                         </DropdownWrapper>
-                                </div>
+                                    </div>
                                 )}
                             >
                                 <a href="/#">
-                                    <span>Sản phẩm <IoIosArrowDown className={cx('arrow')} /></span>
+                                    <span className={cx('dropdown-title')}>
+                                        Sản phẩm <IoIosArrowDown className={cx('arrow')} />
+                                    </span>
                                 </a>
-                                
                             </Tippy>
                         </li>
-                        
+
                         <li>
                             <a href="/#">
-                                <span>Nam <IoIosArrowDown className={cx('arrow')} /></span>
+                                <span className={cx('dropdown-title')}>
+                                    Nam <IoIosArrowDown className={cx('arrow')} />
+                                </span>
                             </a>
                         </li>
                         <li>
                             <a href="/#">
-                                <span>Nữ <IoIosArrowDown className={cx('arrow')} /></span>
+                                <span className={cx('dropdown-title')}>
+                                    Nữ <IoIosArrowDown className={cx('arrow')} />
+                                </span>
                             </a>
                         </li>
                         <li>
                             <a href="/#">
-                                <span>Sale off</span>
+                                <span className={cx('dropdown-title')}>Sale off</span>
                             </a>
                         </li>
                         <li>
@@ -148,13 +152,9 @@ function Header() {
                                 />
                             </a>
                         </li>
-                        
                     </ul>
-                    
                 </div>
-                
-                        
-                        
+
                 <div className={cx('header-middle__search')}>
                     <button>
                         <FiSearch />

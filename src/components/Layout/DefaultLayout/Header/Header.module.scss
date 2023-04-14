@@ -36,6 +36,10 @@
         justify-content: space-between;
         align-items: center;
 
+        .dropdown-title {
+            color: var(--color-black);
+        }
+
         & ul {
             list-style: none;
             display: flex;
@@ -51,20 +55,17 @@
 
                 & a {
                     text-decoration: none;
-                    color: var(--color-black);
                     font-size: 20px;
                     display: flex;
-                    
+
                     & span {
                         padding-bottom: 50px;
-                     
                     }
 
                     :hover {
                         color: var(--color-red);
                         transition: 0.3s linear;
                     }
-
                 }
             }
         }
@@ -79,10 +80,13 @@
             height: 100%;
             float: left;
 
+            .dropdown-products {
+                width: 100%;
+            }
+
             .arrow {
                 margin-left: 5px;
                 transform: translateY(5px);
-                left: 0;
             }
 
             .image-DiscoverYOU img {

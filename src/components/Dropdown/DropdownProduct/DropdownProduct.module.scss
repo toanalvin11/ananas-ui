@@ -2,8 +2,8 @@
     width: 100%;
     max-width: fit-content;
     background: #4c4c4c;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-    margin-top : -10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    margin-top: -10px;
 
     .top {
         display: flex;
@@ -12,11 +12,15 @@
     }
 
     .bottom {
+        .bottom-highlight {
+            color: var(--color-white);
+        }
         & a {
             justify-content: center;
+            color: #808080;
 
             & span {
-                margin : 0 5px;
+                margin: 0 5px;
             }
         }
     }
