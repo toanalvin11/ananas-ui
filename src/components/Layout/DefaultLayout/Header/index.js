@@ -179,10 +179,10 @@ function Header() {
                 </div>
             </div>
             <div className={cx('header__bottom')}>
-                <IoIosArrowBack onClick={() => handleSlide(-1)} />
+                <IoIosArrowBack onClick={() => handleSlide(-1)} className={cx('header__bottom-icon')} />
                 <a href="/#">{renderHotNew()}</a>
 
-                <IoIosArrowForward onClick={() => handleSlide(1)} />
+                <IoIosArrowForward onClick={() => handleSlide(1)} className={cx('header__bottom-icon')} />
             </div>
         </header>
     );
